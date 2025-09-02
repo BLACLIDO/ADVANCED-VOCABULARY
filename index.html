@@ -5,74 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADVANCED VOCABULARY</title>
   <style>
-    body { font-family: Arial,sans-serif; background:#f9fafc; margin:0; padding:20px; color:#2c3e50; }
-    h1 { text-align:center; margin-bottom:30px; }
-    .tree { max-width:900px; margin:auto; }
-    details { margin:10px 0; padding:10px 14px; border-radius:6px; background:#ecf0f1; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
-    summary { cursor:pointer; font-weight:bold; color:#2980b9; }
-    ul { list-style:none; padding-left:20px; margin:8px 0; }
-    li { margin:8px 0; }
-    .iframe-container { padding:20px; max-width:900px; margin:20px auto; background:#fff; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); display:none; }
-    .iframe-container iframe { width:100%; border:none; }
-    @media (max-width:600px){ body{padding:10px} h1{font-size:1.6rem} .iframe-container{padding:10px} .iframe-container iframe{height:400px} }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafc;
+      margin: 0;
+      padding: 20px;
+      color: #2c3e50;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    .tree {
+      max-width: 800px;
+      margin: auto;
+      padding: 10px;
+    }
+    details {
+      margin: 10px 0;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: #ecf0f1;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #2980b9;
+      font-size: 1.1rem;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+    li {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+    a {
+      text-decoration: none;
+      color: #34495e;
+      word-wrap: break-word;
+    }
+    a:hover {
+      color: #e74c3c;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      h1 { font-size: 1.6rem; }
+      summary { font-size: 1rem; }
+      li { font-size: 0.95rem; }
+      .tree { padding: 5px; }
+    }
   </style>
 </head>
 <body>
-<h1>ADVANCED VOCABULARY</h1>
-<div class="tree">
+  <h1>ADVANCED VOCABULARY</h1>
 
-  <details>
-    <summary>ACTIVITIES</summary>
-    <ul>
-      <li><span class="activity-title" data-src="ACTIVITIES/Communication and language 1.html">Communication and language 1</span>
-        <div class="iframe-container"></div>
-      </li>
-      <li><span class="activity-title" data-src="ACTIVITIES/Communication and language 2.html">Communication and language 2</span>
-        <div class="iframe-container"></div>
-      </li>
-      <li><span class="activity-title" data-src="ACTIVITIES/Communication and language 3.html">Communication and language 3</span>
-        <div class="iframe-container"></div>
-      </li>
-      <li><span class="activity-title" data-src="ACTIVITIES/Communication and language - Practice.html">Communication and language - Practice</span>
-        <div class="iframe-container"></div>
-      </li>
-      <li><span class="activity-title" data-src="ACTIVITIES/Communication and language - Game map.html">Communication and language - Game map</span>
-        <div class="iframe-container"></div>
-      </li>
-    </ul>
-  </details>
+  <div class="tree">
+    <!-- ACTIVITIES Folder -->
+    <details>
+      <summary>ACTIVITIES</summary>
+      <ul>
+        <li><a href="actividad.html?src=ACTIVITIES/Communication and language 1.html&title=Communication and language 1">Communication and language 1</a></li>
+        <li><a href="actividad.html?src=ACTIVITIES/Communication and language 2.html&title=Communication and language 2">Communication and language 2</a></li>
+        <li><a href="actividad.html?src=ACTIVITIES/Communication and language 3.html&title=Communication and language 3">Communication and language 3</a></li>
+        <li><a href="actividad.html?src=ACTIVITIES/Communication and language - Practice.html&title=Communication and language - Practice">Communication and language - Practice</a></li>
+        <li><a href="actividad.html?src=ACTIVITIES/Communication and language - Game map.html&title=Communication and language - Game map">Communication and language - Game map</a></li>
+      </ul>
+    </details>
 
-  <details>
-    <summary>COURSE PRESENTATIONS</summary>
-    <ul>
-      <li><span class="activity-title" data-src="COURSE PRESENTATIONS/Communication and language.html">Communication and language</span>
-        <div class="iframe-container"></div>
-      </li>
-    </ul>
-  </details>
+    <!-- COURSE PRESENTATIONS Folder -->
+    <details>
+      <summary>COURSE PRESENTATIONS</summary>
+      <ul>
+        <li><a href="actividad.html?src=COURSE PRESENTATIONS/Communication and language.html&title=Communication and language">Communication and language</a></li>
+      </ul>
+    </details>
 
-</div>
-
-<script>
-  // Lazy load al hacer clic en el título
-  document.querySelectorAll('.activity-title').forEach(title=>{
-    title.addEventListener('click', ()=>{
-      const container = title.nextElementSibling;
-      if(container.innerHTML===''){
-        const iframe = document.createElement('iframe');
-        iframe.src = title.dataset.src;
-        container.appendChild(iframe);
-        container.style.display = 'block';
-        iframe.addEventListener('load', ()=>{
-          try{ iframe.style.height = iframe.contentWindow.document.body.scrollHeight+'px'; }
-          catch(e){ iframe.style.height='600px'; }
-        });
-      } else {
-        container.style.display = container.style.display==='none'?'block':'none';
-      }
-    });
-  });
-</script>
-
+    <!-- ADVANCED VOCABULARY BOOK Folder (ejemplo nuevo) -->
+    <details>
+      <summary>ADVANCED VOCABULARY BOOK</summary>
+      <ul>
+        <li><a href="actividad.html?src=Advanced Vocabulary Book/Lesson 1.html&title=Lesson 1">Lesson 1</a></li>
+        <li><a href="actividad.html?src=Advanced Vocabulary Book/Lesson 2.html&title=Lesson 2">Lesson 2</a></li>
+        <!-- archivo sin márgenes -->
+        <li><a href="Advanced Vocabulary Book/Quiz.html">Quiz (sin márgenes)</a></li>
+      </ul>
+    </details>
+  </div>
 </body>
 </html>
