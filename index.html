@@ -47,29 +47,17 @@
     a {
       text-decoration: none;
       color: #34495e;
-      word-wrap: break-word; /* evita que los enlaces largos desborden */
+      word-wrap: break-word;
     }
     a:hover {
       color: #e74c3c;
     }
-
-    /* 📱 Adaptación para pantallas pequeñas */
     @media (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
-      h1 {
-        font-size: 1.6rem;
-      }
-      summary {
-        font-size: 1rem;
-      }
-      li {
-        font-size: 0.95rem;
-      }
-      .tree {
-        padding: 5px;
-      }
+      body { padding: 10px; }
+      h1 { font-size: 1.6rem; }
+      summary { font-size: 1rem; }
+      li { font-size: 0.95rem; }
+      .tree { padding: 5px; }
     }
   </style>
 </head>
@@ -81,11 +69,17 @@
     <details>
       <summary>ACTIVITIES</summary>
       <ul>
-        <li><a href="ACTIVITIES/Communication and language 1.html" target="_blank">Communication and language 1</a></li>
-        <li><a href="ACTIVITIES/Communication and language 2.html" target="_blank">Communication and language 2</a></li>
-        <li><a href="ACTIVITIES/Communication and language 3.html" target="_blank">Communication and language 3</a></li>
-        <li><a href="ACTIVITIES/Communication and language - Practice.html" target="_blank">Communication and language - Practice</a></li>
-        <li><a href="ACTIVITIES/Communication and language - Game map.html" target="_blank">Communication and language - Game map</a></li>
+        <!-- Communication and language Subfolder -->
+        <details>
+          <summary>Communication and language</summary>
+          <ul>
+            <li><a href="ACTIVITIES/Communication and language/Communication and language 1.html" target="_blank">Communication and language 1</a></li>
+            <li><a href="ACTIVITIES/Communication and language/Communication and language 2.html" target="_blank">Communication and language 2</a></li>
+            <li><a href="ACTIVITIES/Communication and language/Communication and language 3.html" target="_blank">Communication and language 3</a></li>
+            <li><a href="ACTIVITIES/Communication and language/Communication and language - Practice.html" target="_blank">Communication and language - Practice</a></li>
+            <li><a href="ACTIVITIES/Communication and language/Communication and language - Game map.html" target="_blank">Communication and language - Game map</a></li>
+          </ul>
+        </details>
       </ul>
     </details>
 
